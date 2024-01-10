@@ -1,0 +1,485 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+:root{
+    --black-color: black;
+    --white-color : white;
+    --brown :#777175;
+    --overallpadding:50px;
+    --menupadding :30px;
+    --poppins : 'Poppins', San-serif;
+    /* --yellow-color :rgb(151, 151, 79); */
+    --yellow-color :#D3EFBD;
+    --topdown-padding :100px;
+
+}   
+
+body{
+    font-family: var(--poppins);
+}
+
+
+/* header section  */
+
+header{
+    padding: var(--overallpadding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+}
+
+
+header ul{
+    display: flex;
+    align-items: center;
+}
+
+header ul li a{
+    padding: 0 var(--menupadding);
+    color: var(--white-color);
+    text-transform: capitalize;
+}
+
+header ul li:hover{
+    /* background-color: var(--white-color); */
+    border-radius: 30px;
+    border: 1px solid var(--white-color);
+    padding: 5px 10px;
+    box-shadow: 1px 1px 10px white;
+}
+
+header ul > li:last-child{
+    border: 1px solid rgb(42, 90, 161);
+    border-radius: 30px;
+    padding: 5px 10px;
+    background-color: rgb(5, 43, 101);
+    box-shadow: 1px 1px 10px white;
+    }
+
+header nav, .menuIcon{
+    z-index: 1000;
+}
+
+
+.menuIcon{
+    display: none;
+    font-size: 2rem;
+}
+
+ .sticky{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* about me section */
+
+.aboutMe{
+    display: flex;
+    padding: var(--topdown-padding) var(--overallpadding);
+    /* background-color: var(--black-color); */
+    color: var(--white-color);
+    background-image: radial-gradient(rgb(42, 90, 161) , black , black);
+}
+
+.aboutMe .texts div{
+    position: relative;
+}
+
+
+
+.aboutMe .image{
+    /* border: 1px solid transparent; */
+    border-radius: 50%;
+    /* filter:grayscale(100%); */
+}
+
+
+.aboutMe .image img{
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+    border-color: var(--white-color);
+
+}
+
+.aboutMe .image{
+    /* flex-basis: 900px; */
+    width: 900px;
+    max-width: 100%;
+    margin-right: 50px;
+    border-color: var(--white-color);
+    box-shadow: 1px 1px 30px var(--white-color);
+}
+
+.aboutMe .texts h1{
+    font-size: 2.5rem;
+
+}
+
+.aboutMe .texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.aboutMe .texts p{
+    color: rgba(113, 126, 119, 0.9);
+    line-height: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2rem !important;
+    
+}
+
+.aboutMe .texts  small{
+    color: rgb(42, 90, 161);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+
+/* trial */
+/* wow
+background-image: radial-gradient(rgb(42, 90, 161) , black , black);     */
+/*     background-image: conic-gradient(black,black ,rgb(5, 43, 101) 40%,black,black) !important; */
+
+/* trial */
+
+
+
+
+
+
+/* animation */
+.typingText::after{
+    content: "";
+    width: 5px;
+    height: 100%;
+    margin-left: 5px;
+    background-color:rgb(42, 90, 161);
+    position: absolute;
+    top: 0;
+    animation: blink 0.7s infinite ;
+    /* animation: typeEffect 4s ; */
+}
+
+@keyframes blink{
+    50% {
+        opacity : 0
+    }
+}
+
+/* portfolio */
+.portfolio .projectRight{
+    display: flex;
+    padding: 100px 0;
+    border-bottom: 1px solid var(--white-color);
+}
+
+.portfolio > *:nth-child(even) > div:first-child{
+    order: 2;
+    margin-left: 50px;
+}
+
+.portfolio img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    border-color: inherit;
+    border: none;
+}
+
+
+.portfolio .projectRight .image{
+    width: 40%;
+    margin-right: var(--overallpadding);
+    box-shadow: 1px 1px 20px var(--white-color);
+    border-radius: 10px;
+    border-color: var(--white-color);
+    border: 3px solid white;
+}
+
+.portfolio .projectRight .about{
+    width: 60%;   
+}
+
+.portfolio .projectRight .about > *{
+    margin-bottom: 10px;
+}
+
+
+.portfolio{
+    /*rgba(90, 90, 85, 0.9)  */
+    background-color: black;
+    padding: var(--topdown-padding) var(--overallpadding);
+}
+
+.portfolio .projectRight .about h1{
+    color: rgb(42, 90, 161) !important;
+    font-family: 'bungee', sans-serif !important;
+    letter-spacing: 2px;
+
+}
+
+.portfolio .projectRight .about p{
+   
+    text-justify: inter-word;
+    text-align: justify;
+    color: white;
+    font-weight: 100;
+    font-family: 'Nunito', sans-serif;
+        
+}
+
+.portfolio .projectRight .about a{
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--white-color);
+    border: 1px solid var(--white-color);
+    border-radius: 20px;
+    padding: 5px 10px;
+    box-shadow: 1px 1px 10px white, 1px 1px 50px black;
+}
+
+.portfolio .projectRight .about a:hover{
+    background-color: var(--black-color);
+    color: var(--white-color);
+    border-color: transparent;
+    box-shadow: 1px 1px 10px black, 1px 1px 50px white;
+}
+
+
+
+
+/* services */
+.service{
+    background-color: var(--black-color);
+    color: var(--white-color);
+    
+    padding:  var(--topdown-padding) var(--overallpadding);
+    min-height: 100vh;
+}
+
+
+.service > H1{
+    text-align: center;
+    margin-bottom: 50PX;
+    font-size: 3rem;
+    letter-spacing: 10px;
+    
+}
+.service .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service .pricing{
+    border: 1px solid ;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+/* footer */
+footer .wrapper{
+    display: flex;
+}
+
+footer .wrapper > *{
+    width: 100%;
+}
+
+footer{
+    padding: var(--topdown-padding) var(--overallpadding);
+    background-color: black ;
+    color: white;
+
+}
+
+footer form *{
+    display: block;
+    width: 100%;
+}
+
+footer form{
+    margin-right: var(--overallpadding);
+}
+
+footer form input, footer form textarea{
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+footer input[type=submit]{
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+footer .others > *{
+    margin-bottom: 20px;
+}
+
+
+footer .icons{
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+}
+
+footer  .icons i{
+    font-size: 1.3rem;
+}
+
+.allProjects{
+    background-color: var(--black-color);
+    color: var(--white-color);
+    text-align: center;
+    letter-spacing: 20px;
+    font-size: 3rem;
+    text-shadow: 5px 5px 10px white, 5px 5px 10px blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:  100px  0 20px;
+}
+
+.allProjects .divider{
+    background-color: white;
+    height: 5px;
+    width: 100%;
+    border-radius: 50px;
+    margin: 0 20px;
+}
+
+i.fa-xmark{
+    display: none;
+}
+
+i.fa-arrow-up{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: white;
+    margin: 50px;
+    border: 1px solid var(--white-color);
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 1px 1px 20px white;
+
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.menuIcon{
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+
+    header nav{
+        display: none;
+    }
+
+    header .menuIcon{
+        display: block;
+    }
+
+    .aboutMe{
+        flex-direction: column;
+    }
+
+    .portfolio .projectRight{
+        flex-direction: column;
+        /* border: 1px solid red; */
+        padding: 0;
+    }
+
+    .portfolio .projectRight .image, .portfolio .projectRight .about{
+        width: 100%;
+        margin-right: 0;
+        /* border: 1px solid green; */
+    }
+
+    .portfolio > *:nth-child(even) > div:first-child{
+        margin-left: 0;
+    }
+    
+    .portfolio .projectRight > div{
+        margin: 50px 0;
+    }
+
+    footer .wrapper{
+        flex-direction: column;
+    }
+
+    footer form{
+        margin-bottom: 100px;
+    }
+
+
+    .aboutMe .image{
+        width: 300px;
+        order: 2;
+        text-align: center;
+        margin: auto;
+        margin-top: 70PX;
+    }
+
+
+    .showNav nav ul{   
+        flex-direction: column;
+        gap: 50px;
+        align-items: start  ;
+    }
+    
+     .showNav nav{
+        display: block;
+        background-color: rgba(21, 22, 22, 0.9) !important;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        padding: 30px;
+    }
+    
+    .showNav .fa-xmark{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin:30px ;
+    }
+
+    .showNav{
+        position: static;
+     }
+
+    .allProjects{
+        font-size: 1.5rem;
+    }
+}
