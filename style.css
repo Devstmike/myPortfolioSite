@@ -143,6 +143,7 @@ header nav, .menuIcon{
     line-height: 30px;
     font-family: 'Nunito', sans-serif;
     font-size: 1.2rem !important;
+    text-align: justify;
     
 }
 
@@ -400,6 +401,10 @@ html{
 
 @media screen and (max-width: 992px) {
 
+    :root{
+        --overallpadding:20px;
+    }
+
     header nav{
         display: none;
     }
@@ -482,4 +487,13 @@ html{
     .allProjects{
         font-size: 1.5rem;
     }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .allProjects .divider{
+        display: none;
+    }
+
 }
