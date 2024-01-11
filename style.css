@@ -487,6 +487,10 @@ html{
     .allProjects{
         font-size: 1.5rem;
     }
+
+    footer form{
+        margin-right: 0;
+    }
 }
 
 
