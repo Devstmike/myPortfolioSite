@@ -62,7 +62,7 @@ let uparrow = document.querySelector(".fa-arrow-up");
 menuIcon.onclick = () => {
     header.classList.add("showNav")
     header.classList.add("headerColor");
-    menuIcon.style.display = "none"
+    menuIcon.classList.add("hideMenu")
     uparrow.style.display = "none"
 }
 
@@ -70,7 +70,7 @@ menuIcon.onclick = () => {
 cancel.onclick = () => {
     header.classList.remove("showNav");
     header.classList.remove("headerColor");
-    menuIcon.style.display = "inline-block";
+    menuIcon.classList.remove("hideMenu")
     uparrow.style.display = "none";
 }
 
