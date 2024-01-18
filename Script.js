@@ -10,7 +10,7 @@ let header = document.querySelector("header");
 
 let typingElement = document.querySelector(".typingText");
 let textLength,EachLength = []
-let texts = ["My name is Timilehin","I am a Web Designer and Developer","I have Expertise in HTML, CSS and Javascript","i will turn your imaginations to reality"]
+let texts = ["My name is Timilehin","I am a Web Designer and Developer","I have Expertise in HTML, CSS and Javascript","I will turn your imaginations to reality"]
 function getAll(){
     textLength = texts.length;
     for (let i = 0; i < textLength; i++){
@@ -50,7 +50,7 @@ let myInter = setInterval(() => {
         clearInterval(myInter)
     }
 
-}, 50);
+}, 100);
 
 
 
