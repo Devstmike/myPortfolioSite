@@ -531,6 +531,13 @@ i.fa-arrow-up:hover{
         display: none;
     }
 
+    .entranceAnimation .text {
+        font-size: 3rem;
+    }
+
+    .portfolio .image{
+        height: 300px !important;
+    }
 }
 
 
