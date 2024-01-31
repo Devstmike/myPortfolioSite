@@ -35,8 +35,9 @@ function typingEffect (){
  //   console.log("typing = " + index1 + " " + index2 )
 }
 
+function setTyping(){
 
-let myInter = setInterval(() => {
+    let myInter = setInterval(() => {
     typingEffect()
     index2++
     if(index2 == EachLength[0] & index1 == 0 || index2 == EachLength[1] & index1 == 1 || index2 ==  EachLength[2] & index1 == 2){
@@ -50,8 +51,8 @@ let myInter = setInterval(() => {
         clearInterval(myInter)
     }
 
-}, 100);
-
+    }, 100);
+}
 
 
 let cancel = document.querySelector(".fa-xmark");
@@ -154,3 +155,23 @@ let down = setInterval(() => {
 }, 1000);
 
 
+
+
+portfoliTextCount = 0
+let portfoliTextInterval = setInterval(() => {
+    if(portfoliTextCount == 0){
+        document.querySelector(".entranceAnimation .text h3").innerHTML = "To"
+       }else if(portfoliTextCount == 1){
+        document.querySelector(".entranceAnimation .text h3").innerHTML = "my"
+    }else if(portfoliTextCount == 2){
+        document.querySelector(".entranceAnimation .text h3").innerHTML = "Portfolio"
+    }else if(portfoliTextCount == 3){
+        document.querySelector(".entranceAnimation").style.display = "none";
+        document.querySelector("body").style.overflow = "auto"
+        clearInterval(portfoliTextInterval)
+        setTyping()
+
+    }
+    
+    portfoliTextCount++
+}, 1000);

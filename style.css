@@ -532,3 +532,64 @@ i.fa-arrow-up:hover{
     }
 
 }
+
+
+.entranceAnimation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: red;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+body{
+    overflow: hidden;
+}
+
+.entranceAnimation .rotate{
+    position: fixed;
+    animation: entranceRotate 0.1s infinite;
+    background: conic-gradient(from 180deg,rgb(159, 103, 103),black,rgb(84, 84, 175));
+    width: 150%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.entranceAnimation .text{
+    color: white;
+    text-shadow: 1px 1px 10px white;
+    font-size: 4rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.entranceAnimation{
+    font-family: sans-serif;
+    letter-spacing: 10px;
+}
+
+@keyframes entranceRotate {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
