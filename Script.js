@@ -175,3 +175,16 @@ let portfoliTextInterval = setInterval(() => {
     
     portfoliTextCount++
 }, 1000);
+
+
+let linkToProject =  document.querySelector(".portfolio .about a");
+linkToProject.onclick = (e) => {
+    e.preventDefault()
+     linkToProject.innerText = "Still working on it"
+     linkToProject.classList.add("notFinished")
+     setTimeout(() => {
+        linkToProject.innerText = "Project Link"
+         linkToProject.classList.remove("notFinished")
+     }, 2000);
+     
+}

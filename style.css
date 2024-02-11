@@ -60,7 +60,9 @@ header ul li:hover{
     border: 1px solid var(--white-color);
     padding: 5px 10px;
     box-shadow: 1px 1px 10px white;
+    margin: 10px;
 }
+
 
 header ul > li:last-child{
     border: 1px solid rgb(42, 90, 161);
@@ -531,8 +533,8 @@ i.fa-arrow-up:hover{
         display: none;
     }
 
-    .entranceAnimation .text h3{
-        font-size: 2.5rem !important;
+    .entranceAnimation .text h3 {
+        font-size: 2.5rem;
     }
 
     .portfolio .image{
@@ -562,14 +564,16 @@ body{
 
 .entranceAnimation .rotate{
     position: fixed;
-    animation: entranceRotate 0.1s infinite;
-    background: conic-gradient(from 180deg,rgb(159, 103, 103),black,rgb(84, 84, 175));
+    animation: entranceRotate 1s infinite alternate;
+    background: conic-gradient(from 180deg,rgb(31, 104, 133),black,rgb(42, 94, 117), rgb(110, 153, 163));
     width: 150%;
     height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: -1;
+    height: 2000px;
+    width: 2000px;
 }
 
 .entranceAnimation .text{
@@ -582,9 +586,12 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
+.entranceAnimation h3{
+    text-align: center;
+}
 
 .entranceAnimation{
     font-family: sans-serif;
@@ -599,4 +606,11 @@ body{
     100%{
         transform: rotate(360deg);
     }
+}
+
+
+
+.notFinished{
+    border: 2px solid  green !important;
+    box-shadow: none !important;
 }
