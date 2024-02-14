@@ -188,3 +188,58 @@ linkToProject.onclick = (e) => {
      }, 2000);
      
 }
+
+
+
+function preventFormSubmit() {
+    var forms = document.querySelectorAll('form');
+    //alert("prevented")
+    for (var i = 0; i < forms.length; i++) {
+    forms[i].addEventListener('submit', function(event) {
+    event.preventDefault();
+    SendData()
+    });
+    }
+}
+
+ window.addEventListener("load", preventFormSubmit); 
+
+// I used Google Apps Script to handle Email
+function SendData() {
+    // e.preventDefault()
+     const formEle = document.querySelector(".wrapper form");
+     const formDatab = new FormData(formEle);
+     console.log("sent")
+     console.log(formDatab)
+     formDatab.forEach(el => {
+         console.log(el)
+     })
+     fetch(
+     "https://script.google.com/macros/s/AKfycbwcGmdLuLK81k02EvRmvsexi8iiah0Cz-qmV7-JyzCxMjJR9CVDEkzMVx2jCmDX2SjEEw/exec",
+     {
+         method: "POST",
+         body: formDatab
+     }
+     )
+     .then((res) => res.text())
+     .then((data) => {
+         console.log(data);
+     })
+     .catch((error) => {
+         console.log(error);
+     });
+
+    formEle.reset()
+    
+    let thankyou =  `<div class="thanks" style="text-align:center">
+         <p style="Color:green;font-size:2rem;margin-bottom:10px">
+             Thank You!
+         </p>
+         <p style="font-size:2rem;">
+             Your Message has been Sent.
+        </p>
+     </div>`;
+    document.querySelector(".wrapper others").style.display = "none";
+     document.querySelector(".hero-Contact-Page").innerHTML = thankyou
+ }
+ 
