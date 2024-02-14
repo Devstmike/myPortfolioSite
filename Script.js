@@ -239,7 +239,7 @@ function SendData() {
              Your Message has been Sent.
         </p>
      </div>`;
-    document.querySelector(".wrapper others").style.display = "none";
-     document.querySelector(".hero-Contact-Page").innerHTML = thankyou
+    document.querySelector(".wrapper .others").style.display = "none";
+     document.querySelector(".form").innerHTML = thankyou
  }
  
